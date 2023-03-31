@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,500;0,700;0,900;1,300&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+    <title>Sniffer</title>
+</head>
+
+<body>
+
+    <main class="container">
+        <div class="app">
+            <section class="section-ip-detected">
+                <h3>Direcciones IP detectadas</h3>
+                <div class="container-ip-detected">
+                    <ul>
+                        {% for c in lista_ip %}
+                        <li>{{ c }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </section>
+            <section class="section-buttons">
+                <div class="container-button">
+                    <button class="button">Analizar</button>
+                </div>
+                <div class="container-button">
+                    <button class="button button-verdatos" type="submit">Actualizar datos</button>
+                </div>
+            </section>
+            <section class="section-ip-data">
+                <div class="container-table">
+                    <table class="table tabla-responsive">
+                        <thead>
+                            <tr class="colum-1">
+                                <th>Ip origen</th>
+                                <th>Destino</th>
+                                <th>Username</th>
+                                <th>Password</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for fila in datos_ip %}
+                            <tr>
+                                {% for dato in fila %}
+                                <td>{{ dato }}</td>
+                                {% endfor %}
+                            </tr>
+                            {% endfor %}
+
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="{{url_for('static', filename='js/index.js')}}"></script>
+</body>
+
+</html>

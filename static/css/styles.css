@@ -1,0 +1,93 @@
+:root {
+    --white: #ffffff;
+    --lightGray: #f3f3f3;
+    --gray: #babcc5;
+    --darkGray: #6e7575;
+    --green: #88FCAF;
+    --darkBlue: #17181e;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--darkBlue);
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 1.4rem;
+    color: var(--darkGray);
+}
+
+.app {
+    background-color: var(--white);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+    row-gap: 5rem;
+}
+
+.container {
+    width: 90%;
+    max-width: 120rem;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.button {
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 900;
+    background-color: var(--green);
+    padding: 1rem;
+    color: var(--darkBlue);
+    border-radius: 5px;
+    font-size: 1.4rem;
+    border: none;
+    cursor: pointer;
+}
+
+.section-ip-detected {
+    color: var(--darkGray);
+}
+
+.container-ip-detected {
+    background-color: var(--white);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    min-height: 10rem;
+}
+
+.table {
+    text-align: center;
+}
+
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap;
+}
+
+.table td,
+.table th {
+    padding: 0.5em;
+    border: 1px solid #ddd;
+}
+
+@media (min-width: 480px) {
+    
+}
+
+.section-buttons {
+    display: flex;
+    gap: 1rem;
+}
